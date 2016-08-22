@@ -8,4 +8,4 @@ WORKDIR /etugra
 CMD python -m pip install zeep
 ENV  PYTHONPATH .:/usr/local/lib/python3.5
 
-CMD ["python","./etugra.py","secinitd.log"]
+CMD ["python","./etugra.py","-t"]
