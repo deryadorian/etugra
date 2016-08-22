@@ -4,7 +4,6 @@ import hashlib
 import sys
 import getopt
 from zeep import Client
-import base64
 
 #etugra service client definitions
 WSDL = 'http://edocservice.e-tugra.com.tr/services/TsaService.asmx?wsdl'
