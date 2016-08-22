@@ -4,6 +4,7 @@ import hashlib
 import sys
 import getopt
 from zeep import Client
+import base64
 
 #etugra service client definitions
 WSDL = 'http://edocservice.e-tugra.com.tr/services/TsaService.asmx?wsdl'
@@ -20,10 +21,13 @@ for opt, arg in opts:
     if opt == '-t':  #Check the current number of tokens left       
         print(SOAPClient.service.GetTsaCount('test','test'))
     elif opt  == '-g': #gettimestamp for a file
-        inputfile = sys.argv[2]
-        filecontent = open(inputfile,'r').read().encode('utf-8')
+        filecontent = open(sys.argv[2],'r').read().encode('utf-8')
         sha = hashlib.sha256() 
         sha.update(filecontent) #SHA256 of the input file
         timestamp = SOAPClient.service.GetTimeStamp(sha.digest(),'test','test')
-        print(timestamp)
+        #print(timestamp)
+        file = open(sha.hexdigest(),'wb')
+        #print(timestamp['TimeStampEncoded'].decode())
+        file.write(timestamp['TimeStampEncoded'])
+
 #Step3: input dizin ve etugra response file concat
