@@ -1,4 +1,0 @@
-Aug 20 02:08:53 localhost secinitd[144]: UID[0]: cache loaded: /System/Library/Caches/com.apple.app-sandbox-cache.plist
-Aug 20 02:08:53 localhost secinitd[144]: ctkd[143]: unable to get root path for bundle of main executable: /System/Library/Frameworks/CryptoTokenKit.framework/ctkd
-Aug 20 02:09:01 Deryas-MacBook-Pro secinitd[312]: UID[501]: cache loaded: /System/Library/Caches/com.apple.app-sandbox-cache.plist
-Aug 20 02:09:20 Deryas-MacBook-Pro secinitd[466]: UID[248]: cache loaded: /System/Library/Caches/com.apple.app-sandbox-cache.plist
