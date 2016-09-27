@@ -24,5 +24,7 @@ for opt, arg in opts:
         sha = hashlib.sha256() 
         sha.update(filecontent) #SHA256 of the input file
         timestamp = SOAPClient.service.GetTimeStamp(sha.digest(),'test','test') #TODO: input the user and password from parameter/configfile
-        file = open(sha.hexdigest(),'wb') #Open file in binary mode
+        print(timestamp)
+        timestampfilepath = "/timestamps/" + sha.hexdigest() 
+        file = open(timestampfilepath,'wb') #Open file in binary mode
         file.write(timestamp['TimeStampEncoded']) #write the binary timestamp to hex sha256 named file
