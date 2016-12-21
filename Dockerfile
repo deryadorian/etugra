@@ -14,3 +14,4 @@ CMD python -m pip install zeep
 ENV  PYTHONPATH .:/usr/local/lib/python3.5
 
 CMD ["python","/tmp/etugra.py","-t"]
+
